@@ -771,9 +771,9 @@ func _parse_argv(p_argv: PackedStringArray, p_callable: Callable, r_args: Array)
 			r_args[i - 1] = a.to_float()
 		elif a.is_valid_int():
 			r_args[i - 1] = a.to_int()
-		elif a == "true" or a == "1" or a == "yes":
+		elif a == "true" or a == "1" or a == "yes" or a == "on":
 			r_args[i - 1] = true
-		elif a == "false" or a == "0" or a == "no":
+		elif a == "false" or a == "0" or a == "no" or a == "off":
 			r_args[i - 1] = false
 		else:
 			r_args[i - 1] = a.trim_prefix('"').trim_suffix('"')
